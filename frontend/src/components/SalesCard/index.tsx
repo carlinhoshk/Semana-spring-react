@@ -7,6 +7,8 @@ import { BASE_URL } from "../../utils/request";
 import NotificationButton from '../NotificationButton';
 import './styles.css';
 
+
+
 function SalesCard() {
 
     const min = new Date(new Date().setDate(new Date().getDate() - 365));
@@ -78,7 +80,7 @@ function SalesCard() {
                                         <td>{sale.amount.toFixed(2)}</td>
                                         <td>
                                             <div className="dsmeta-red-btn-container">
-                                                <NotificationButton />
+                                                <NotificationButton saleId={sale.id} />
                                             </div>
                                         </td>
                                     </tr>
